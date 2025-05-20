@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Базові стилі для всіх боксів */
+.box {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border: 5px solid #2980b9;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* Приклад 1: Фіксовані розміри */
+.fixed-size {
+    width: 300px;
+    height: 200px;
+    background-color: #e74c3c;
+    border-color: #c0392b;
+}
+
+/* Приклад 2: Відносні розміри */
+.relative-size {
+    width: 50%;
+    height: 150px;
+    background-color: #2ecc71;
+    border-color: #27ae60;
+}
+
+/* Приклад 3: Min/Max розміри */
+.min-max-size {
+    width: 70%;
+    min-width: 200px;
+    max-width: 600px;
+    height: 120px;
+    background-color: #f39c12;
+    border-color: #e67e22;
+}
+
+/* Приклад 4: Порівняння box-sizing */
+.comparison {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.content-box {
+    box-sizing: content-box;
+    width: 200px;
+    height: 100px;
+    background-color: #9b59b6;
+    border-color: #8e44ad;
+    padding: 30px;
+    margin: 10px;
+}
+
+.border-box {
+    box-sizing: border-box;
+    width: 200px;
+    height: 100px;
+    background-color: #1abc9c;
+    border-color: #16a085;
+    padding: 30px;
+    margin: 10px;
+}
+
+/* Приклад 5: Viewport одиниці */
+.viewport-units {
+    width: 50vw;
+    height: 30vh;
+    background-color: #34495e;
+    border-color: #2c3e50;
+    min-height: 100px; /* На всякий випадок */
+}
+
+/* Приклад 6: Calc() функція */
+.calc-example {
+    width: calc(100% - 40px);
+    height: 100px;
+    background-color: #e67e22;
+    border-color: #d35400;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Додаткові демонстрації */
+.box-model-demo {
+    width: 200px;
+    height: 200px;
+    
+    /* Вміст */
+    background-color: lightblue;
+    
+    /* Внутрішній відступ */
+    padding: 20px;
+    
+    /* Рамка */
+    border: 10px solid darkblue;
+    
+    /* Зовнішній відступ */
+    margin: 30px auto;
+    
+    /* Для демонстрації */
+    text-align: center;
+    line-height: 160px; /* height - (padding * 2) */
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .comparison {
+        flex-direction: column;
+    }
+    
+    .content-box,
+    .border-box {
+        width: 100%;
+    }
+    
+    .viewport-units {
+        width: 90vw;
+        height: 25vh;
+    }
+}
+
+/* Інтерактивність */
+.box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* Додаткова інформація */
+.info-box {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    font-style: italic;
+}

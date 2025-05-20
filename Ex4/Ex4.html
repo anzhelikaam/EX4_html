@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розміри блоків та Box Model</title>
+    <link rel="stylesheet" href="Ex4box-model.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Блокова модель CSS</h1>
+        
+        <h2>Приклад 1: Фіксовані розміри</h2>
+        <div class="box fixed-size">
+            Фіксований розмір: 300x200px
+        </div>
+        
+        <h2>Приклад 2: Відносні розміри</h2>
+        <div class="box relative-size">
+            Відносний розмір: 50% ширини
+        </div>
+        
+        <h2>Приклад 3: Min/Max розміри</h2>
+        <div class="box min-max-size">
+            Мінімум 200px, максимум 600px ширини
+        </div>
+        
+        <h2>Приклад 4: Різні box-sizing</h2>
+        <div class="comparison">
+            <div class="box content-box">
+                box-sizing: content-box (за замовчуванням)
+            </div>
+            <div class="box border-box">
+                box-sizing: border-box (рекомендований)
+            </div>
+        </div>
+        
+        <h2>Приклад 5: Viewport одиниці</h2>
+        <div class="box viewport-units">
+            50vw x 30vh (viewport units)
+        </div>
+        
+        <h2>Приклад 6: Calc() функція</h2>
+        <div class="box calc-example">
+            width: calc(100% - 40px)
+        </div>
+    </div>
+</body>
+</html>
